@@ -1,0 +1,14 @@
+language: java
+jdk: oraclejdk8
+
+os:
+  - linux
+
+dist: trusty
+
+install:
+  - sudo apt-get --yes install ninja-build
+
+sudo: false
+
+script: ./HelloWorldJNI/build.sh

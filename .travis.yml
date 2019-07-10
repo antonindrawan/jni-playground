@@ -1,13 +1,14 @@
 language: java
-jdk: oraclejdk8
+jdk: openjdk14
 
 os:
   - linux
 
-dist: trusty
+dist: bionic
 
-install:
-  - sudo apt-get --yes install ninja-build
+before_install:
+  - sudo apt update
+  - sudo apt --yes install ninja-build
 
 sudo: false
 

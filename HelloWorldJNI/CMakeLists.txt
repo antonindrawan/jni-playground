@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 11)
 find_package(JNI REQUIRED)
 find_package(Java REQUIRED)
 include(UseJava)
-set(CMAKE_JAVA_COMPILE_FLAGS "-source" "1.8" "-target" "1.8")
+#set(CMAKE_JAVA_COMPILE_FLAGS "-source" "1.8" "-target" "1.8")
 
 # Compile Java files
 add_jar(HelloWorldServiceNative

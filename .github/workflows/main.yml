@@ -1,0 +1,13 @@
+name: A workflow for building HelloWorldJNI
+on: push
+
+jobs:
+    build:
+        name: Build stage
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout
+            uses: actions/checkout@v1
+          - name: Build HelloWorldJNI
+            run: |
+              ./HelloWorldJNI/build.sh

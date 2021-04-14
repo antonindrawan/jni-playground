@@ -30,10 +30,9 @@ message(STATUS "_classDir: ${_classDir}")
 set (_stubDir "${CMAKE_CURRENT_BINARY_DIR}")
 add_custom_command(
   OUTPUT com_example_jni_HelloWorldServiceNative.h
-  COMMAND ${Java_JAVAH_EXECUTABLE} -verbose
-      -classpath ${_classDir}
-      -d ${_stubDir}
-      -jni com.example.jni.HelloWorldServiceNative
+  COMMAND ${Java_JAVAC_EXECUTABLE}
+      -h ${_stubDir}
+      ${PROJECT_SOURCE_DIR}/src/com/example/jni/HelloWorldServiceNative.java
   DEPENDS HelloWorldServiceNative
 )
 

@@ -1,3 +1,3 @@
 = jni-playground
 
-image:https://travis-ci.org/antonindrawan/jni-playground.svg?branch=master["Build Status", link="https://travis-ci.org/antonindrawan/jni-playground"]
+image:https://github.com/antonindrawan/jni-playground/workflows/HelloWorldJNI/badge.svg[link="https://github.com/antonindrawan/jni-playground/actions"]

@@ -16,7 +16,7 @@ add_jar(HelloWorldService
 # Generate JNI header stub
 set (_stubDir "${CMAKE_CURRENT_BINARY_DIR}")
 add_custom_command(
-  OUTPUT com_example_jni_HelloWorldServiceNative.h
+  OUTPUT com_example_jni_HelloWorldServiceNative_header
   COMMAND ${Java_JAVAC_EXECUTABLE}
       -h ${_stubDir}
       ${PROJECT_SOURCE_DIR}/src/com/example/jni/HelloWorldServiceNative.java
@@ -25,7 +25,7 @@ add_custom_command(
 # Compile JNI
 add_library(HelloWorldJNI MODULE
   jni/HelloWorldService.cpp
-  ${_stubDir}/com_example_jni_HelloWorldServiceNative.h
+  com_example_jni_HelloWorldServiceNative_header
 )
 
 target_include_directories(HelloWorldJNI
